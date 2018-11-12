@@ -1,0 +1,18 @@
+﻿Process newVar 
+mov [esp+4],esi			==c=esi
+sub [esp+4],8			
+mov[esp+12],eax       ==pc=c-8
+mov [esp+8],[eax]		==addr=read(32)
+add 4,[esp+12]
+mov [esp+12],[eax]    
+shr [esp+12],16
+mov [esp+12],eax     ==sz=rad(16)
+add [esp+8],[esp+12]
+moc [esp+8],eax       == addr=addr+sz
+mov [esp+4],[esp+8]  == push (addr)
+shl [esp],16				== size<<16
+mov [esp+16],eax		
+add [esp+4],4			
+mov [eax],[esp+16]	==push (size)    
+add esi,8					== esi+=8
+return [esp+8]

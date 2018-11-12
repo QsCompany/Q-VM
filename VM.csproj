@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34EDA8C1-12A7-42B1-919C-2919CEC37B19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VM</RootNamespace>
+    <AssemblyName>VM</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>New folder\VM.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="New folder\Bases\Assembler.cs" />
+    <Compile Include="New folder\Bases\Structs.cs" />
+    <Compile Include="New folder\Compile.cs" />
+    <Compile Include="New folder\Component\Process.cs" />
+    <Compile Include="New folder\Component\Registers.cs" />
+    <Compile Include="New folder\Component\UAL.cs" />
+    <Compile Include="New folder\Component\UMC.cs" />
+    <Compile Include="New folder\Global\Arbre.cs" />
+    <Compile Include="New folder\Global\Bit.cs" />
+    <Compile Include="New folder\Global\Builder.cs" />
+    <Compile Include="New folder\Global\Compile.cs" />
+    <Compile Include="New folder\Global\Help.cs" />
+    <Compile Include="New folder\Global\InitialProcessData.cs" />
+    <Compile Include="New folder\Global\Interrupter_Help.cs" />
+    <Compile Include="New folder\Global\InversibleAttribute.cs" />
+    <Compile Include="New folder\Global\Nbit.cs" />
+    <Compile Include="New folder\Global\StreamReader.cs" />
+    <Compile Include="New folder\Global\StreamWriter.cs" />
+    <Compile Include="New folder\Global\Tree.cs" />
+    <Compile Include="New folder\Grammair\Bases\Consts.cs" />
+    <Compile Include="New folder\Grammair\Bases\Trace.cs" />
+    <Compile Include="New folder\Grammair\Basic.cs" />
+    <Compile Include="New folder\Grammair\Complex.cs" />
+    <Compile Include="New folder\Parser\DataType.cs" />
+    <Compile Include="New folder\Parser\Instruct.cs" />
+    <Compile Include="New folder\Parser\Operand.cs" />
+    <Compile Include="New folder\Parser\OperandData.cs" />
+    <Compile Include="New folder\Program.cs" />
+    <Compile Include="New folder\Temp\Network.cs" />
+    <Compile Include="New folder\Temp\register.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="New folder\Assembly\NewVar.txt" />
+    <Content Include="New folder\Library\Compiler_R.dll" />
+    <Content Include="New folder\VM.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
